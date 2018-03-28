@@ -9,19 +9,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+
+
+
 
 
 </head>
 
 <body>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Your New Friend</h4>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+
+           
+          </div>
+        </div>
+      </div>
+
+
     <h2>Survey</h2>
     <hr>
-    <div class="container">
 
-        <div class="row">
-            <div class="col-sm">
 
                 <h3>About You</h3>
 
@@ -34,247 +55,174 @@
                     <input type="text" class="form-control" placeholder="URL" aria-describedby="sizing-addon2">
 
                 </div>
-            </div>
 
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-sm">
+       
+                <form>
+        
+            <hr>
+        <h1>Answer some questions and find a friend</h1>
+        <h3>You like dogs</h3>
+          <select id="q1" name="question1">
+            <option value="1">Do not agree</option>
+            <option value="2">Mostly do not agree</option>
+            <option value="3">Sometimes agree and sometimes disagree</option>
+            <option value="4">Mostly agree</option>
+            <option value="5">Completely agree</option>
+          </select>
+        <h3>You like cats</h3>
+        <select id="q2" name="question2">
+          <option value="1">Do not agree</option>
+          <option value="2">Mostly do not agree</option>
+          <option value="3">Sometimes agree and sometimes disagree</option>
+          <option value="4">Mostly agree</option>
+          <option value="5">Completely agree</option>
+        </select>
+        <h3>You like city life</h3>
+        <select id="q3" name="question3">
+          <option value="1">Do not agree</option>
+          <option value="2">Mostly do not agree</option>
+          <option value="3">Sometimes agree and sometimes disagree</option>
+          <option value="4">Mostly agree</option>
+          <option value="5">Completely agree</option>
+        </select>
+        <h3>You like the country </h3>
+        <select id="q4" name="question4">
+          <option value="1">Do not agree</option>
+          <option value="2">Mostly do not agree</option>
+          <option value="3">Sometimes agree and sometimes disagree</option>
+          <option value="4">Mostly agree</option>
+          <option value="5">Completely agree</option>
+        </select>
+        <h3>You're an introvert</h3>
+        <select id="q5" name="question5">
+          <option value="1">Do not agree</option>
+          <option value="2">Mostly do not agree</option>
+          <option value="3">Sometimes agree and sometimes disagree</option>
+          <option value="4">Mostly agree</option>
+          <option value="5">Completely agree</option>
+        </select>
+        <h3>You like rainy days</h3>
+        <select id="q6" name="question6">
+          <option value="1">Do not agree</option>
+          <option value="2">Mostly do not agree</option>
+          <option value="3">Sometimes agree and sometimes disagree</option>
+          <option value="4">Mostly agree</option>
+          <option value="5">Completely agree</option>
+        </select>
+        <h3>You'd rather hang with animals than people</h3>
+        <select id="q7" name="question7">
+          <option value="1">Do not agree</option>
+          <option value="2">Mostly do not agree</option>
+          <option value="3">Sometimes agree and sometimes disagree</option>
+          <option value="4">Mostly agree</option>
+          <option value="5">Completely agree</option>
+        </select>
+        <h3>You prefer coke over pepsi</h3>
+        <select id="q8" name="question8">
+          <option value="1">Do not agree</option>
+          <option value="2">Mostly do not agree</option>
+          <option value="3">Sometimes agree and sometimes disagree</option>
+          <option value="4">Mostly agree</option>
+          <option value="5">Completely agree</option>
+        </select>
+        <h3>You like sushi</h3>
+        <select id="q9" name="question9">
+          <option value="1">Do not agree</option>
+          <option value="2">Mostly do not agree</option>
+          <option value="3">Sometimes agree and sometimes disagree</option>
+          <option value="4">Mostly agree</option>
+          <option value="5">Completely agree</option>
+        </select>
+        <h3>You like cheese fries</h3>
+        <select id="q10" name="question10">
+          <option value="1">Do not agree</option>
+          <option value="2">Mostly do not agree</option>
+          <option value="3">Sometimes agree and sometimes disagree</option>
+          <option value="4">Mostly agree</option>
+          <option value="5">Completely agree</option>
+        </select>
 
-                <h3>Question 1</h3>
-                <h4>You find yourself constantly pontificating about the gentrification of neighborhoods</h4>
-                <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Please Pick One <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>1 (strongly agree)</li>
-                          <li>2</li>
-                          <li>3</li>
-                          <li>4</li>
-                          <li>5 (strongly disagree)</li>
-                        </ul>
-                      </div>
+        <button style='display:block; margin-top: 40px'type='submit' id='submit'>Find your friend </button>
+        </form>
 
+        <script>
+                var friends
+                
+                $.get('/api/friends').then(function(res){
+                    friends=res;
+                })
+            
+            document.getElementById('submit').addEventListener('click', function(event){
+                event.preventDefault()
+                var myValues = []
+                var q1 = parseInt(document.getElementById('q1').value)
+                var q2 = parseInt(document.getElementById('q2').value)
+                var q3 = parseInt(document.getElementById('q3').value)
+                var q4 = parseInt(document.getElementById('q4').value)
+                var q5 = parseInt(document.getElementById('q5').value)
+                var q6 = parseInt(document.getElementById('q6').value)
+                var q7 = parseInt(document.getElementById('q7').value)
+                var q8 = parseInt(document.getElementById('q8').value)
+                var q9 = parseInt(document.getElementById('q9').value)
+                var q10 = parseInt(document.getElementById('q10').value)
+                myValues.push(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10)
+                
+                var difference = []
+                var friendsScores = []
+             
+                // console.log(myValues);
+             
+                // console.log(friends);
+             
+                for (var i = 0; i < friends.friends.length; i++) {
+                    friendsScores.push(friends.friends[i].scores)
+                }
+             
+                for (var j = 0; j < friendsScores.length; j++) {
+                  for (var i = 0; i < friendsScores[j].length; i++) {
+                    if (friendsScores[j][i] > myValues[i]){
+                       //console.log( friendsScores[j][i] + ' was greater than ' + myValues[i])
+                       //console.log('the diff is ', friendsScores[j][i] - myValues[i]);
+                       difference.push(friendsScores[j][i] - myValues[i])
+                    } else if (friendsScores[j][i] > myValues[i]){
+                       //console.log( friendsScores[j][i] + ' was less than ' + myValues[i])
+                       //console.log('the diff is ', myValues[i] - friendsScores[j][i])
+                       difference.push(myValues[i] - friendsScores[j][i])
+                    } else {
+                      //console.log( friendsScores[j][i] + ' is equal to ' + myValues[i])
+                      //console.log('the diff is ', 0)
+                      difference.push(0)
+                    }
+                  }
+                }
+             
+             
+                //console.log(difference);
+                var differnceSmallerArray = []
+             
+                var size = 10;
+                 for (var i=0; i<difference.length; i+=size) {
+                     var smallarray = difference.slice(i,i+size);
+                     differnceSmallerArray.push(smallarray)
+                 }
+             
+             
+                 console.log(differnceSmallerArray);
 
-            </div>
+                $('.modal-body').html('Hello')
+                $('#myModal').modal()
 
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-sm">
-
-                <h3>Question 2</h3>
-                <h4>You fuck with the war</h4>
-                <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Please Pick One <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>1 (strongly agree)</li>
-                          <li>2</li>
-                          <li>3</li>
-                          <li>4</li>
-                          <li>5 (strongly disagree)</li>
-                        </ul>
-                      </div>
-
-
-            </div>
-
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-sm">
-
-                <h3>Question 3</h3>
-                <h4>I, for one, like roman numerals</h4>
-                <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Please Pick One <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>1 (strongly agree)</li>
-                          <li>2</li>
-                          <li>3</li>
-                          <li>4</li>
-                          <li>5 (strongly disagree)</li>
-                        </ul>
-                      </div>
-
-
-            </div>
-
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-sm">
-
-                <h3>Question 4</h3>
-                <h4>You would be ok with not having legs, if that meant you'd never have to work again</h4>
-                <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Please Pick One <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>1 (strongly agree)</li>
-                          <li>2</li>
-                          <li>3</li>
-                          <li>4</li>
-                          <li>5 (strongly disagree)</li>
-                        </ul>
-                      </div>
-
-
-            </div>
-
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-sm">
-
-                <h3>Question 5</h3>
-                <h4>It's my world you're just living in it</h4>
-                <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Please Pick One <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>1 (strongly agree</li>
-                          <li>2</li>
-                          <li>3</li>
-                          <li>4</li>
-                          <li>5 (strongly disagree)<li>
-                        </ul>
-                      </div>
-
-
-            </div>
-
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-sm">
-
-                <h3>Question 6</h3>
-                <h4>You'd eat sushi everyday if it weren't for the mercury poisioning</h4>
-                <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Please Pick One <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>1 (strongly agree)</li>
-                          <li>2</li>
-                          <li>3</li>
-                          <li>4</li>
-                          <li>5 (strongly diagree)</li>
-                        </ul>
-                      </div>
-
-
-            </div>
-
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-sm">
-
-                <h3>Question 7</h3>
-                <h4>Hey, that sounds like a you problem man. I got my bills too</h4>
-                <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Please Pick One <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>1 (strongly disagree)</li>
-                          <li>2</li>
-                          <li>3</li>
-                          <li>4</li>
-                          <li>5 (strongly disagree)</li>
-                        </ul>
-                      </div>
-
-
-            </div>
-
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-sm">
-
-                <h3>Question 8</h3>
-                <h4>You'd rather be born blind than go blind later in life</h4>
-                <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Please Pick One <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>1 (strongly agree)</li>
-                          <li>2</li>
-                          <li>3</li>
-                          <li>4</li>
-                          <li>5 (strongly disagree)</li>
-                        </ul>
-                      </div>
+                //console.log(myValues);
+                //console.log(friendsScores);
+            })
 
 
-            </div>
-
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-sm">
-
-                <h3>Question 9</h3>
-                <h4>It was like that when you got here</h4>
-                <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Please Pick One <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>1 (strongly agree)</li>
-                          <li>2</li>
-                          <li>3</li>
-                          <li>4</li>
-                          <li>5 (strongly disagree)</li>
-                        </ul>
-                      </div>
-
-
-            </div>
-
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-sm">
-
-                <h3>Question 10</h3>
-                <h4>I can’t promise I’ll try, but I’ll try to try.</h4>
-                <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Please Pick One <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>1 (strongly agree)</li>
-                          <li>2</li>
-                          <li>3</li>
-                          <li>4</li>
-                          <li>5 (strongly disagree)</li>
-                        </ul>
-                      </div>
-
-            </div>
-
-        </div>
-        <hr>
-
-
-
-
-
-
-    </div>
+            
+        
+        
+        </script>
+      
 
 </body>
 
-</html>
+</html> 
