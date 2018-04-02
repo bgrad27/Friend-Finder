@@ -7,6 +7,8 @@ var htmlrouter = require('./app/routing/htmlRoutes');
 
 var app = express();
 
+var PORT = 3100 || process.env.NODE_ENV
+
 
 //Make an array to save user responses
 
