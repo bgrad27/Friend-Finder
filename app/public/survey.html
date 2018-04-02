@@ -167,37 +167,39 @@
                 var q10 = parseInt(document.getElementById('q10').value)
                 myValues.push(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10)
                 
-                var difference = []
+                
+             
+             
+                //empty array for next loop
                 var friendsScores = []
-             
-                // console.log(myValues);
-             
-                // console.log(friends);
-             
                 for (var i = 0; i < friends.friends.length; i++) {
                     friendsScores.push(friends.friends[i].scores)
                 }
-             
+                
+                
+                //empty array for next loo
+                var difference = []
+                
                 for (var j = 0; j < friendsScores.length; j++) {
                   for (var i = 0; i < friendsScores[j].length; i++) {
                     if (friendsScores[j][i] > myValues[i]){
-                       //console.log( friendsScores[j][i] + ' was greater than ' + myValues[i])
-                       //console.log('the diff is ', friendsScores[j][i] - myValues[i]);
+                      //  console.log( friendsScores[j][i] + ' was greater than ' + myValues[i])
+                      //  console.log('the diff is ', friendsScores[j][i] - myValues[i]);
                        difference.push(friendsScores[j][i] - myValues[i])
-                    } else if (friendsScores[j][i] > myValues[i]){
-                       //console.log( friendsScores[j][i] + ' was less than ' + myValues[i])
-                       //console.log('the diff is ', myValues[i] - friendsScores[j][i])
+                    } else if (friendsScores[j][i] < myValues[i]){
+                      //  console.log( friendsScores[j][i] + ' was less than ' + myValues[i])
+                      //  console.log('the diff is ', myValues[i] - friendsScores[j][i])
                        difference.push(myValues[i] - friendsScores[j][i])
                     } else {
-                      //console.log( friendsScores[j][i] + ' is equal to ' + myValues[i])
-                      //console.log('the diff is ', 0)
+                      // console.log( friendsScores[j][i] + ' is equal to ' + myValues[i])
+                      // console.log('the diff is ', 0)
                       difference.push(0)
                     }
                   }
                 }
              
              
-                //console.log(difference);
+                // console.log(difference);
                 var differnceSmallerArray = []
              
                 var size = 10;
@@ -207,14 +209,44 @@
                  }
              
              
-                 console.log(differnceSmallerArray);
+                //  console.log(differnceSmallerArray);
 
-                $('.modal-body').html('Hello')
+
+                //sum these together to find difference
+                var sumDifs = []
+                for(var i = 0; i < differnceSmallerArray.length; i++){
+                  function getSum(total, num){
+                    return total + num;
+                  
+                  }
+                  sumDifs.push(differnceSmallerArray[i].reduce(getSum))
+                }
+                // console.log(sumDifs);
+                
+                
+                //select lowest number as person who most closely matches us
+                var index = 0
+                var value = sumDifs[0]
+                for(var i = 0; i < sumDifs.length; i++){
+                  if(sumDifs[i] < value){
+                    value = sumDifs[i]
+                    index = i
+                  }
+                }
+                // console.log(value);
+
+                //now using the index of the lowest value from sumDifs we can select are friend from the friends array
+                var chosenFriend = friends.friends[index]
+                console.log(chosenFriend);
+
+                $('.modal-body').html(`<h1>${chosenFriend.name}</h1> <img src="${chosenFriend.photo}">`)
                 $('#myModal').modal()
 
                 //console.log(myValues);
                 //console.log(friendsScores);
+
             })
+            
 
 
             
@@ -224,5 +256,9 @@
       
 
 </body>
-
+<style>
+      img{
+        width: 100%;
+      }
+</style>
 </html> 
