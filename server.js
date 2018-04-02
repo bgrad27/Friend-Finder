@@ -7,7 +7,7 @@ var htmlrouter = require('./app/routing/htmlRoutes');
 
 var app = express();
 
-var PORT = 3100 || process.env.NODE_ENV
+var port = process.env.PORT || 3100
 
 
 //Make an array to save user responses
@@ -49,7 +49,7 @@ app.use('/', htmlrouter)
 
 
 
-app.listen(3100, function(){
+app.listen(port, function(){
     console.log('Listening on port 3100')
 });
 
