@@ -26,6 +26,17 @@ var port = process.env.PORT || 3100
 // }
 
 
+//TOO DEPLOY ON HEROKU: IN TERMINAL
+//1. heroku login
+    //Enter Credentials
+//2. heroku create
+//3. git init 
+//3a.git add -A
+//3b. git commit -m"""
+//*******MOST IMPORTANT***********
+//4. git remote -v
+//5. git push heroku master
+
 
 //compare each individual response in the userResponse scores array([0],[1],[2]...) against the premade friends
 //diff?

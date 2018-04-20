@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Survey</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Survey</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
 
 
 
@@ -22,243 +23,246 @@
 <body>
 
 
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Your New Friend</h4>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-
-           
-          </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Your New Friend</h4>
         </div>
+        <div class="modal-body">
+          ...
+        </div>
+
+
       </div>
+    </div>
+  </div>
 
 
-    <h2>Survey</h2>
+  <h2 id="survey">Survey</h2>
+  <hr>
+
+
+  <h3>About You</h3>
+
+  <div class="input-group">
+
+    <span class="input-group-addon" id="sizing-addon2">Name:</span>
+    <input type="text" class="form-control" placeholder="Arnold Schwartzinager" aria-describedby="sizing-addon2">
+
+    <span class="input-group-addon" id="sizing-addon2">Link to Photo</span>
+    <input type="text" class="form-control" placeholder="URL" aria-describedby="sizing-addon2">
+
+  </div>
+
+
+  <form>
+
     <hr>
+    <h1>Answer some questions and find a friend</h1>
+    <h3>You like dogs</h3>
+    <select id="q1" name="question1">
+      <option value="1">Do not agree</option>
+      <option value="2">Mostly do not agree</option>
+      <option value="3">Sometimes agree and sometimes disagree</option>
+      <option value="4">Mostly agree</option>
+      <option value="5">Completely agree</option>
+    </select>
+    <h3>You like cats</h3>
+    <select id="q2" name="question2">
+      <option value="1">Do not agree</option>
+      <option value="2">Mostly do not agree</option>
+      <option value="3">Sometimes agree and sometimes disagree</option>
+      <option value="4">Mostly agree</option>
+      <option value="5">Completely agree</option>
+    </select>
+    <h3>You like city life</h3>
+    <select id="q3" name="question3">
+      <option value="1">Do not agree</option>
+      <option value="2">Mostly do not agree</option>
+      <option value="3">Sometimes agree and sometimes disagree</option>
+      <option value="4">Mostly agree</option>
+      <option value="5">Completely agree</option>
+    </select>
+    <h3>You like the country </h3>
+    <select id="q4" name="question4">
+      <option value="1">Do not agree</option>
+      <option value="2">Mostly do not agree</option>
+      <option value="3">Sometimes agree and sometimes disagree</option>
+      <option value="4">Mostly agree</option>
+      <option value="5">Completely agree</option>
+    </select>
+    <h3>You're an introvert</h3>
+    <select id="q5" name="question5">
+      <option value="1">Do not agree</option>
+      <option value="2">Mostly do not agree</option>
+      <option value="3">Sometimes agree and sometimes disagree</option>
+      <option value="4">Mostly agree</option>
+      <option value="5">Completely agree</option>
+    </select>
+    <h3>You like rainy days</h3>
+    <select id="q6" name="question6">
+      <option value="1">Do not agree</option>
+      <option value="2">Mostly do not agree</option>
+      <option value="3">Sometimes agree and sometimes disagree</option>
+      <option value="4">Mostly agree</option>
+      <option value="5">Completely agree</option>
+    </select>
+    <h3>You'd rather hang with animals than people</h3>
+    <select id="q7" name="question7">
+      <option value="1">Do not agree</option>
+      <option value="2">Mostly do not agree</option>
+      <option value="3">Sometimes agree and sometimes disagree</option>
+      <option value="4">Mostly agree</option>
+      <option value="5">Completely agree</option>
+    </select>
+    <h3>You prefer coke over pepsi</h3>
+    <select id="q8" name="question8">
+      <option value="1">Do not agree</option>
+      <option value="2">Mostly do not agree</option>
+      <option value="3">Sometimes agree and sometimes disagree</option>
+      <option value="4">Mostly agree</option>
+      <option value="5">Completely agree</option>
+    </select>
+    <h3>You like sushi</h3>
+    <select id="q9" name="question9">
+      <option value="1">Do not agree</option>
+      <option value="2">Mostly do not agree</option>
+      <option value="3">Sometimes agree and sometimes disagree</option>
+      <option value="4">Mostly agree</option>
+      <option value="5">Completely agree</option>
+    </select>
+    <h3>You like cheese fries</h3>
+    <select id="q10" name="question10">
+      <option value="1">Do not agree</option>
+      <option value="2">Mostly do not agree</option>
+      <option value="3">Sometimes agree and sometimes disagree</option>
+      <option value="4">Mostly agree</option>
+      <option value="5">Completely agree</option>
+    </select>
+
+    <button style='display:block; margin-top: 40px' type='submit' id='submit'>Find your friend </button>
+  </form>
+
+  <script>
+    var friends
+
+    $.get('/api/friends').then(function (res) {
+      friends = res;
+    })
+
+    document.getElementById('submit').addEventListener('click', function (event) {
+      event.preventDefault()
+      var myValues = []
+      var q1 = parseInt(document.getElementById('q1').value)
+      var q2 = parseInt(document.getElementById('q2').value)
+      var q3 = parseInt(document.getElementById('q3').value)
+      var q4 = parseInt(document.getElementById('q4').value)
+      var q5 = parseInt(document.getElementById('q5').value)
+      var q6 = parseInt(document.getElementById('q6').value)
+      var q7 = parseInt(document.getElementById('q7').value)
+      var q8 = parseInt(document.getElementById('q8').value)
+      var q9 = parseInt(document.getElementById('q9').value)
+      var q10 = parseInt(document.getElementById('q10').value)
+      myValues.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
 
 
-                <h3>About You</h3>
-
-                <div class="input-group">
-
-                    <span class="input-group-addon" id="sizing-addon2">Name:</span>
-                    <input type="text" class="form-control" placeholder="Arnold Schwartzinager" aria-describedby="sizing-addon2">
-
-                    <span class="input-group-addon" id="sizing-addon2">Link to Photo</span>
-                    <input type="text" class="form-control" placeholder="URL" aria-describedby="sizing-addon2">
-
-                </div>
-
-       
-                <form>
-        
-            <hr>
-        <h1>Answer some questions and find a friend</h1>
-        <h3>You like dogs</h3>
-          <select id="q1" name="question1">
-            <option value="1">Do not agree</option>
-            <option value="2">Mostly do not agree</option>
-            <option value="3">Sometimes agree and sometimes disagree</option>
-            <option value="4">Mostly agree</option>
-            <option value="5">Completely agree</option>
-          </select>
-        <h3>You like cats</h3>
-        <select id="q2" name="question2">
-          <option value="1">Do not agree</option>
-          <option value="2">Mostly do not agree</option>
-          <option value="3">Sometimes agree and sometimes disagree</option>
-          <option value="4">Mostly agree</option>
-          <option value="5">Completely agree</option>
-        </select>
-        <h3>You like city life</h3>
-        <select id="q3" name="question3">
-          <option value="1">Do not agree</option>
-          <option value="2">Mostly do not agree</option>
-          <option value="3">Sometimes agree and sometimes disagree</option>
-          <option value="4">Mostly agree</option>
-          <option value="5">Completely agree</option>
-        </select>
-        <h3>You like the country </h3>
-        <select id="q4" name="question4">
-          <option value="1">Do not agree</option>
-          <option value="2">Mostly do not agree</option>
-          <option value="3">Sometimes agree and sometimes disagree</option>
-          <option value="4">Mostly agree</option>
-          <option value="5">Completely agree</option>
-        </select>
-        <h3>You're an introvert</h3>
-        <select id="q5" name="question5">
-          <option value="1">Do not agree</option>
-          <option value="2">Mostly do not agree</option>
-          <option value="3">Sometimes agree and sometimes disagree</option>
-          <option value="4">Mostly agree</option>
-          <option value="5">Completely agree</option>
-        </select>
-        <h3>You like rainy days</h3>
-        <select id="q6" name="question6">
-          <option value="1">Do not agree</option>
-          <option value="2">Mostly do not agree</option>
-          <option value="3">Sometimes agree and sometimes disagree</option>
-          <option value="4">Mostly agree</option>
-          <option value="5">Completely agree</option>
-        </select>
-        <h3>You'd rather hang with animals than people</h3>
-        <select id="q7" name="question7">
-          <option value="1">Do not agree</option>
-          <option value="2">Mostly do not agree</option>
-          <option value="3">Sometimes agree and sometimes disagree</option>
-          <option value="4">Mostly agree</option>
-          <option value="5">Completely agree</option>
-        </select>
-        <h3>You prefer coke over pepsi</h3>
-        <select id="q8" name="question8">
-          <option value="1">Do not agree</option>
-          <option value="2">Mostly do not agree</option>
-          <option value="3">Sometimes agree and sometimes disagree</option>
-          <option value="4">Mostly agree</option>
-          <option value="5">Completely agree</option>
-        </select>
-        <h3>You like sushi</h3>
-        <select id="q9" name="question9">
-          <option value="1">Do not agree</option>
-          <option value="2">Mostly do not agree</option>
-          <option value="3">Sometimes agree and sometimes disagree</option>
-          <option value="4">Mostly agree</option>
-          <option value="5">Completely agree</option>
-        </select>
-        <h3>You like cheese fries</h3>
-        <select id="q10" name="question10">
-          <option value="1">Do not agree</option>
-          <option value="2">Mostly do not agree</option>
-          <option value="3">Sometimes agree and sometimes disagree</option>
-          <option value="4">Mostly agree</option>
-          <option value="5">Completely agree</option>
-        </select>
-
-        <button style='display:block; margin-top: 40px'type='submit' id='submit'>Find your friend </button>
-        </form>
-
-        <script>
-                var friends
-                
-                $.get('/api/friends').then(function(res){
-                    friends=res;
-                })
-            
-            document.getElementById('submit').addEventListener('click', function(event){
-                event.preventDefault()
-                var myValues = []
-                var q1 = parseInt(document.getElementById('q1').value)
-                var q2 = parseInt(document.getElementById('q2').value)
-                var q3 = parseInt(document.getElementById('q3').value)
-                var q4 = parseInt(document.getElementById('q4').value)
-                var q5 = parseInt(document.getElementById('q5').value)
-                var q6 = parseInt(document.getElementById('q6').value)
-                var q7 = parseInt(document.getElementById('q7').value)
-                var q8 = parseInt(document.getElementById('q8').value)
-                var q9 = parseInt(document.getElementById('q9').value)
-                var q10 = parseInt(document.getElementById('q10').value)
-                myValues.push(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10)
-                
-                
-             
-             
-                //empty array for next loop
-                var friendsScores = []
-                for (var i = 0; i < friends.friends.length; i++) {
-                    friendsScores.push(friends.friends[i].scores)
-                }
-                
-                
-                //empty array for next loo
-                var difference = []
-                
-                for (var j = 0; j < friendsScores.length; j++) {
-                  for (var i = 0; i < friendsScores[j].length; i++) {
-                    if (friendsScores[j][i] > myValues[i]){
-                      //  console.log( friendsScores[j][i] + ' was greater than ' + myValues[i])
-                      //  console.log('the diff is ', friendsScores[j][i] - myValues[i]);
-                       difference.push(friendsScores[j][i] - myValues[i])
-                    } else if (friendsScores[j][i] < myValues[i]){
-                      //  console.log( friendsScores[j][i] + ' was less than ' + myValues[i])
-                      //  console.log('the diff is ', myValues[i] - friendsScores[j][i])
-                       difference.push(myValues[i] - friendsScores[j][i])
-                    } else {
-                      // console.log( friendsScores[j][i] + ' is equal to ' + myValues[i])
-                      // console.log('the diff is ', 0)
-                      difference.push(0)
-                    }
-                  }
-                }
-             
-             
-                // console.log(difference);
-                var differnceSmallerArray = []
-             
-                var size = 10;
-                 for (var i=0; i<difference.length; i+=size) {
-                     var smallarray = difference.slice(i,i+size);
-                     differnceSmallerArray.push(smallarray)
-                 }
-             
-             
-                //  console.log(differnceSmallerArray);
 
 
-                //sum these together to find difference
-                var sumDifs = []
-                for(var i = 0; i < differnceSmallerArray.length; i++){
-                  function getSum(total, num){
-                    return total + num;
-                  
-                  }
-                  sumDifs.push(differnceSmallerArray[i].reduce(getSum))
-                }
-                // console.log(sumDifs);
-                
-                
-                //select lowest number as person who most closely matches us
-                var index = 0
-                var value = sumDifs[0]
-                for(var i = 0; i < sumDifs.length; i++){
-                  if(sumDifs[i] < value){
-                    value = sumDifs[i]
-                    index = i
-                  }
-                }
-                // console.log(value);
-
-                //now using the index of the lowest value from sumDifs we can select are friend from the friends array
-                var chosenFriend = friends.friends[index]
-                console.log(chosenFriend);
-
-                $('.modal-body').html(`<h1>${chosenFriend.name}</h1> <img src="${chosenFriend.photo}">`)
-                $('#myModal').modal()
-
-                //console.log(myValues);
-                //console.log(friendsScores);
-
-            })
-            
+      //empty array for next loop
+      var friendsScores = []
+      for (var i = 0; i < friends.friends.length; i++) {
+        friendsScores.push(friends.friends[i].scores)
+      }
 
 
-            
-        
-        
-        </script>
-      
+      //empty array for next loo
+      var difference = []
+
+      for (var j = 0; j < friendsScores.length; j++) {
+        for (var i = 0; i < friendsScores[j].length; i++) {
+          if (friendsScores[j][i] > myValues[i]) {
+            //  console.log( friendsScores[j][i] + ' was greater than ' + myValues[i])
+            //  console.log('the diff is ', friendsScores[j][i] - myValues[i]);
+            difference.push(friendsScores[j][i] - myValues[i])
+          } else if (friendsScores[j][i] < myValues[i]) {
+            //  console.log( friendsScores[j][i] + ' was less than ' + myValues[i])
+            //  console.log('the diff is ', myValues[i] - friendsScores[j][i])
+            difference.push(myValues[i] - friendsScores[j][i])
+          } else {
+            // console.log( friendsScores[j][i] + ' is equal to ' + myValues[i])
+            // console.log('the diff is ', 0)
+            difference.push(0)
+          }
+        }
+      }
+
+
+      // console.log(difference);
+      var differnceSmallerArray = []
+
+      var size = 10;
+      for (var i = 0; i < difference.length; i += size) {
+        var smallarray = difference.slice(i, i + size);
+        differnceSmallerArray.push(smallarray)
+      }
+
+
+      //  console.log(differnceSmallerArray);
+
+
+      //sum these together to find difference
+      var sumDifs = []
+      for (var i = 0; i < differnceSmallerArray.length; i++) {
+        function getSum(total, num) {
+          return total + num;
+
+        }
+        sumDifs.push(differnceSmallerArray[i].reduce(getSum))
+      }
+      // console.log(sumDifs);
+
+
+      //select lowest number as person who most closely matches us
+      var index = 0
+      var value = sumDifs[0]
+      for (var i = 0; i < sumDifs.length; i++) {
+        if (sumDifs[i] < value) {
+          value = sumDifs[i]
+          index = i
+        }
+      }
+      // console.log(value);
+
+      //now using the index of the lowest value from sumDifs we can select are friend from the friends array
+      var chosenFriend = friends.friends[index]
+      console.log(chosenFriend);
+
+      $('.modal-body').html(`<h1>${chosenFriend.name}</h1> <img src="${chosenFriend.photo}">`)
+      $('#myModal').modal()
+
+      //console.log(myValues);
+      //console.log(friendsScores);
+
+    })
+
+
+
+
+
+
+  </script>
+
 
 </body>
 <style>
-      img{
-        width: 100%;
-      }
+  img {
+    width: 100%;
+  }
 </style>
-</html> 
+
+</html>
