@@ -1,0 +1,9 @@
+.jumbotron{
+    text-align: center;
+    background-image: url(https://hdbackgroundspot.com//storage/upload/cool-background-designs/cool-background-designs-26.jpg);
+    color: white;
+}
+body{
+    background-image: url(https://hdbackgroundspot.com//storage/upload/cool-background-designs/cool-background-designs-26.jpg);
+    image-rendering: auto;
+}
